@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './css/stylesheet.css';
 
 class App extends Component {
+
+  activateBtn = (e) => {
+    e.currentTarget.classList.toggle('activated');
+  };
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <button className="hover">Hover</button>
+        <button className="opacity" onClick={this.activateBtn}>Opacity</button>
+        <button className="transform" onClick={this.activateBtn}>Transform</button>
+        <button className="width" onClick={this.activateBtn}>Width</button>
       </div>
     );
   }

@@ -54,6 +54,25 @@ button {
   }
 }
 
+.bomb {
+  font-size: 4.8rem;
+  &.activated {
+    color: red;
+    transform: scale(1.25);
+  }
+}
+
+.bomb2 {
+  font-size: 4.8rem;
+  .fa-bomb {
+    transition-duration: $transition--m;
+    &.activated {
+      color: red;
+      transform: scale(1.25);
+    }
+  }
+}
+
 
 /*translateX(-50px) scale(1.25)BOOTSTRAP NOTES & RESOLUTION REFERENCE */
 // xs < 768px (.container @ auto)

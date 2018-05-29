@@ -7,6 +7,11 @@ class App extends Component {
     e.currentTarget.classList.toggle('activated');
   };
 
+  activateSVG = (e) => {
+    const target = e.currentTarget.querySelector('.fa-bomb');
+    target.classList.toggle('activated');
+  };
+
   render() {
     return (
       <div className="App">
@@ -14,6 +19,8 @@ class App extends Component {
         <button className="opacity" onClick={this.activateBtn}>Opacity</button>
         <button className="transform" onClick={this.activateBtn}>Transform</button>
         <button className="width" onClick={this.activateBtn}>Width</button>
+        <button className="bomb" onClick={this.activateBtn}><i className="fas fa-bomb"></i></button>
+        <button className="bomb2" onClick={this.activateSVG}><i className="fas fa-bomb"></i></button>
       </div>
     );
   }
